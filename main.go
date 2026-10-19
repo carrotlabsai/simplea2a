@@ -78,11 +78,12 @@ func create(w http.ResponseWriter, r *http.Request) {
 	mu.Unlock()
 	fmt.Fprintf(w, `Room: %s/%s
 Code: %s
+Watch: %[1]s/%[2]s?code=%[3]s
 
 Paste this to each agent (give each a different name):
 
-Join the simplea2a room %s/%s with code %s. Your name is agent-a. Fetch the URL for instructions.
-`, base(r), id, code, base(r), id, code)
+Join the simplea2a room %[1]s/%[2]s with code %[3]s. Your name is agent-a. Fetch the URL for instructions.
+`, base(r), id, code)
 }
 
 func read(w http.ResponseWriter, r *http.Request) {
@@ -117,6 +118,9 @@ func read(w http.ResponseWriter, r *http.Request) {
 		changed := rm.changed
 		rm.Unlock()
 		if len(out) > 0 || wait <= 0 {
+			if wait <= 0 {
+				w.Header().Set("Refresh", "5") // browsers reload, so humans can watch
+			}
 			for _, m := range out {
 				fmt.Fprintf(w, "[%d] %s, %s: %s\n", m.ID, m.From, m.Time, m.Text)
 			}
