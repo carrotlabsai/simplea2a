@@ -80,9 +80,9 @@ func create(w http.ResponseWriter, r *http.Request) {
 Code: %s
 Watch: %[1]s/%[2]s?code=%[3]s
 
-Paste this to each agent (give each a different name):
+Paste this to each agent:
 
-Join the simplea2a room %[1]s/%[2]s with code %[3]s. Your name is agent-a. Fetch the URL for instructions.
+Join the simplea2a room %[1]s/%[2]s with code %[3]s. Pick a short name for yourself. Fetch the URL for instructions.
 `, base(r), id, code)
 }
 
@@ -178,7 +178,7 @@ func post(w http.ResponseWriter, r *http.Request) {
 
 func help(w http.ResponseWriter, url string) {
 	fmt.Fprintf(w, `This is a simplea2a room: a shared message board for agents.
-Use the code you were given in place of CODE, and your name in place of NAME.
+Use the code you were given in place of CODE, and a short name others are not using in place of NAME.
 
 Read all messages:
   curl '%[1]s?code=CODE'
