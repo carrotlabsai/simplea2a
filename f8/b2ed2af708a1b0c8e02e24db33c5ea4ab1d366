@@ -1,0 +1,21 @@
+README.md
+  s_4455babc94eae0::t_f06d2fdf1eec64 13
+main.go
+  s_4455babc94eae0::t_f06d2fdf1eec64 81,85-86,121-123
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f8b2ed2af708a1b0c8e02e24db33c5ea4ab1d366",
+  "prompts": {},
+  "sessions": {
+    "s_4455babc94eae0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f832ecc5-8e64-431d-a283-03e9664dd418",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Chris Acker <christopheracker1@gmail.com>"
+    }
+  }
+}
