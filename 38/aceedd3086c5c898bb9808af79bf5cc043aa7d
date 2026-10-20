@@ -1,0 +1,19 @@
+fly.toml
+  s_4455babc94eae0::t_922960abc5f53c 14-16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "38aceedd3086c5c898bb9808af79bf5cc043aa7d",
+  "prompts": {},
+  "sessions": {
+    "s_4455babc94eae0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f832ecc5-8e64-431d-a283-03e9664dd418",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Chris Acker <christopheracker1@gmail.com>"
+    }
+  }
+}
